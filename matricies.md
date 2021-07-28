@@ -5,7 +5,7 @@ A_{mn} =
 	\begin{matrix}
 	a_{11} & a_{12} & \cdots & a_{1n} \\
 	a_{21} & a_{22} & \ddots & \vdots \\
-	\vdots & \ddots & \ddots & \vdots\\
+	\vdots & \vdots & \ddots & \vdots\\
 	a_{m1} & \cdots & \cdots & a_{mn}
 	\end{matrix}
 	\right)
