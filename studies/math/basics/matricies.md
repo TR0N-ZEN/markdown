@@ -63,6 +63,8 @@ A_{mn} + B_{mn} =
 		\vdots & \vdots & \ddots & \vdots\\
 		b_{m1} & b_{m2} & \cdots & b_{mn}
 	\end{matrix}	\right)
+$$
+$$
 	=
 	\left(	\begin{matrix}
 		a_{11} + b_{11} & a_{12} + b_{12} & \cdots & a_{1n} + b_{1n} \\
@@ -121,7 +123,7 @@ mit $\forall r,c \in \mathbb{N}: a_{rc},b_{rc} \in K$ .
 
 >Eine andere Idee der Vorstellungsentwicklung:
 >$$
->	A_{mn}  v_{n1} = 
+>	A_{mn}  v_{1} = 
 >	\left(	\begin{matrix}
 >		a_{11} & \cdots & a_{1n} \\
 >		\vdots & \ddots & \vdots\\
@@ -132,18 +134,19 @@ mit $\forall r,c \in \mathbb{N}: a_{rc},b_{rc} \in K$ .
 >		\vdots\\
 >		b_{n1}
 >	\end{matrix}	\right)
+>$$
+>$$
 >	=
 >	\left(	\begin{matrix}
 >		a_{11} b_{11} + a_{12} b_{21} + \cdots + a_{1n} + b_{n1}\\
 >		\vdots \\
 >		a_{m1} b_{11} + a_{m2} b_{21} + \cdots + a_{mn} + b_{n1}
 >	\end{matrix}	\right)
->\tag{6}
 >$$
 >
 >Sei
 >$$
->A_{mn}  v_{ns} = 
+>A_{mn}  v_{s} = 
 >	\left(\begin{matrix}
 >	a_{11} & \cdots & a_{1n} \\
 >	\vdots & \ddots & \vdots \\
@@ -162,20 +165,43 @@ mit $\forall r,c \in \mathbb{N}: a_{rc},b_{rc} \in K$ .
 >	\vdots \\
 >	a_{m1} b_{1s} + a_{m2} b_{2s} + \cdots + a_{mn} + b_{ns}
 >	\end{matrix}\right)
->	\tag{7}
 >$$
+wobei
+$$
+B_{ns} = \left(\begin{matrix}v_{1} & \cdots & v_{s}\end{matrix}\right)
+$$
 mit
 $$
-B_{ns} = \left(\begin{matrix}v_{n1} & \cdots & v_{ns}\end{matrix}\right)
+v_{i} = 
+	\left(\begin{matrix}
+		b_{i1} \\ \vdots \\ w_{in}
+	\end{matrix}\right)
 $$
 und
 $$
 A_{mn} =
 	\left(\begin{matrix}
-		a_{i1} \\ \vdots \\ a_{is}
+		w_{1} \\ \vdots \\ w_{m}
 	\end{matrix}\right)
 $$
-so ergibt sich $(5)$.
+mit
+$$
+w_{i} =
+	\left(\begin{matrix}
+		a_{i1} & \cdots & a_{in}
+	\end{matrix}\right)
+$$
+so ergibt sich $(5)$ wie folgt
+$$
+A_{mn} B_{ns} =
+	\left(	\begin{matrix}
+		w_{1}v_{1} & w_{1}v_{2} & \cdots & w_{1}v_{(s-1)} & w_{1}v_{s} \\
+		\vdots & \vdots & \ddots & \vdots & \vdots \\
+		w_{m}v_{1} & w_{m}v_{2} & \cdots & w_{m}v_{(s-1)} & w_{1}v_{s}
+	\end{matrix} \right)
+\tag{6}
+$$
+wobei $\forall i,j \in \mathbb{N}: w_{i}v_{j}$ das Skalarprodukt der Vektoren $w_{i}$ und $v_{j}$ ist.
 
 ---
 
@@ -186,6 +212,8 @@ $$
 	\left(\begin{matrix}
 	a_{m}x^m + a_{m-1}x^{m-1} + \cdots + a_{1}x^1 +a_{0}x^0
 	\end{matrix}\right)
+$$
+$$	
 	=
 	\left(\begin{matrix}
 	a_{m} & a_{m-1} & \cdots & a_{1} & a_{0}
@@ -199,7 +227,7 @@ $$
 	x^1 \\
 	x^0
 	\end{matrix}\right)
-	\tag{8}
+	\tag{7}
 $$
 
 Seien m verschiedene $p(x_{i})$ und $a_{i}$ gegeben so kann man als Matrixprodukt schreiben:
@@ -224,7 +252,7 @@ $$
 	p(x_{1}) \\
 	p(x_{0})
 	\end{matrix}\right)
-	\tag{9}
+	\tag{8}
 $$
 kurz:
 $$Ax=b$$
@@ -237,17 +265,17 @@ Zur Überprüfung ihrer Bemühungen:
 * Addiert man die i-te Zeile in $A$ auf die j-te Zeile in $A$, so muss die i-te Zeile in $b$ auf die j-te Zeile in $b$ addiert werden
 
 
-Die optimalste Form von a wäre eine Diagonalmatrix (alle Einträge außer auf der Hauptdiagonale sind 0):
-$$
-D_{A} =
-\left(\begin{matrix}
-	r_{m} & 0 & \cdots & 0 & 0\\
-	0 & r_{m-1}  & \cdots & 0 & 0\\
-	\vdots & \vdots & \ddots & \vdots & \vdots\\
-	0 & 0 & \cdots & r_{1} & 0 \\
-	0 & 0 & \cdots & 0 & r_{0}
-	\end{matrix}\right)$$
-
+>Die optimalste Form von a wäre eine Diagonalmatrix (alle Einträge außer auf der Hauptdiagonale sind 0):
+>$$
+>D_{A} =
+>\left(\begin{matrix}
+>	r_{m} & 0 & \cdots & 0 & 0\\
+>	0 & r_{m-1}  & \cdots & 0 & 0\\
+>	\vdots & \vdots & \ddots & \vdots & \vdots\\
+>	0 & 0 & \cdots & r_{1} & 0 \\
+>	0 & 0 & \cdots & 0 & r_{0}
+>	\end{matrix}\right)
+>$$
 ---
 
 **Eigenschaften der Matrizenmultiplikation**
@@ -272,40 +300,58 @@ $$
 	\right) \right)
 	\left(
 	\begin{matrix}
-	c_{11} & \cdots & b_{1t} \\
+	c_{11} & \cdots & c_{1t} \\
 	\vdots & \ddots & \vdots\\
-	b_{s1} & \cdots & b_{st}
+	c_{s1} & \cdots & c_{st}
 	\end{matrix}
 	\right)
-	\tag{10}
 $$
 $$
 	=
 	\left(
 	\begin{matrix}
-	a_{11} b_{11} + \cdots + a_{1n} + b_{n1} & \cdots & a_{11} b_{1s} + \cdots + a_{1n} + b_{ns} \\
-	\vdots & \ddots & \vdots \\
-	a_{m1} b_{11} + \cdots + a_{mn} + b_{n1} & \cdots & a_{m1} b_{1s} + \cdots + a_{mn} + b_{ns}
+		w_{1}v_{1} & \cdots & w_{1}v_{s} \\
+		\vdots & \ddots & \vdots  \\
+		w_{m}v_{1} & \cdots & w_{m}v_{s}
 	\end{matrix}
 	\right)
 	\left(
 	\begin{matrix}
-	c_{11} & \cdots & b_{1t} \\
+	c_{11} & \cdots & c_{1t} \\
 	\vdots & \ddots & \vdots\\
-	b_{s1} & \cdots & b_{st}
+	c_{s1} & \cdots & c_{st}
 	\end{matrix}
 	\right)
-	\tag{11}
+	\tag{9}
 $$
-mit $\forall r,c \in \mathbb{N}: a_{rc},b_{rc} \in K$.
+, wobei hier die Schreibweise der Skalarprodukte wie in $(6)$ genutzt wird.
 Sei
 $$
-(A_{mn}  B_{ns}) =
-\left(
-\begin{matrix}
-ab_{11} & \cdots & ab_{1s} \\
-\vdots & \ddots & \vdots \\
-ab_{m1} & \cdots & ab_{ms}
-\end{matrix}
-\right)
+C_{st} =
+	\left(\begin{matrix}
+		u_{1} & \cdots & u_{t}
+	\end{matrix}\right)
+$$
+mit
+$$
+u_{i} =
+	\left(\begin{matrix}
+		c_{i1} \\ \vdots \\ c_{is}
+	\end{matrix}\right)
+$$
+und
+$$
+A_{mn}  B_{ns} =
+	\left(	\begin{matrix}
+		d_{1} \\
+		\vdots \\
+		d_{m}
+	\end{matrix}\right)
+$$
+mit
+$$
+d_{i} =
+	\left(\begin{matrix}
+		w_{i}v_{1} & \cdots & w_{i}v_{s}
+	\end{matrix}\right)
 $$
