@@ -9,14 +9,13 @@ A_{mn} =
 	a_{m1} & a_{m2} & \cdots & a_{mn}
 	\end{matrix}
 	\right)
-	\tag{1}
-$$
+	\tag{1}>$$
 mit $\forall r,c \in \mathbb{N}: a_{rc} \in K$,
 
 wobei wir nun schreiben $A_{mn} \in K^{m\times n}$
 
-z.B. eine 3 x 3 Matrix
-$$
+>z.B. eine 3 x 3 Matrix
+>$$
 A_{3,3} = 
 	\left(
 	\begin{matrix}
@@ -24,14 +23,12 @@ A_{3,3} =
 	a_{21} & a_{22} & a_{23} \\
 	a_{31} & a_{32} & a_{33}
 	\end{matrix}
-	\right)
-	\tag{2}
-$$
-mit $\forall r,c \in \{1,2,3\}: a_{rc} \in \mathbb{R}$
-,wobei wir nun schreiben $A \in \mathbb{R}^{3\times 3}$
-
-,wobei eine konkrete Matrix $A_{k}$ so aussehen kann:
-$$
+	\right)$$
+>mit $\forall r,c \in \{1,2,3\}: a_{rc} \in \mathbb{R}$
+>, wobei wir nun schreiben $A \in \mathbb{R}^{3\times 3}$
+>>
+>>,wobei eine konkrete Matrix $A_{k}$ so aussehen kann:
+>>$$
 A_{k} =
 	\left(
 	\begin{matrix}
@@ -39,9 +36,7 @@ A_{k} =
 	7 & 0 & 5 \\
 	0 & 4 & 97
 	\end{matrix}
-	\right)
-\tag{3}
-$$
+	\right)$$
 
 Matrizen der Form
 $$
@@ -54,7 +49,7 @@ $$
 	a_{m1}
 	\end{matrix}
 	\right)
-\tag{4}
+\tag{2}
 $$
 mit $\forall i \in \mathbb{N}: a_{i1} \in K$
 
@@ -90,7 +85,7 @@ A_{mn} + B_{mn} =
 	a_{m1} + b_{m1} & a_{m2} + b_{m2} & \cdots & a_{mn} + b_{mn}
 	\end{matrix}
 	\right)
-	\tag{5}
+	\tag{3}
 $$
 mit $\forall r,c \in \mathbb{N}: a_{rc},b_{rc} \in K$.
 
@@ -114,7 +109,7 @@ sA_{mn} = s
 	sa_{m1} & sa_{m2} & \cdots & sa_{mn}
 	\end{matrix}
 	\right)
-	\tag{6}
+	\tag{4}
 $$
 mit $\forall r,c \in \mathbb{N}: a_{rc},s \in K$.
 
@@ -145,7 +140,7 @@ $$
 	a_{m1} b_{11} + a_{m2} b_{21} + \cdots + a_{mn} + b_{n1} & \cdots & a_{m1} b_{1s} + a_{m2} b_{2s} + \cdots + a_{mn} + b_{ns}
 	\end{matrix}
 	\right)
-	\tag{7}
+	\tag{5}
 $$
 mit $\forall r,c \in \mathbb{N}: a_{rc},b_{rc} \in K$.
 Eine andere Ideee der Vorstellungsentwicklung:
@@ -175,40 +170,106 @@ $$
 	a_{m1} b_{11} + a_{m2} b_{21} + \cdots + a_{mn} + b_{n1}
 	\end{matrix}
 	\right)
-	\tag{8}
+	\tag{6}
 $$
 
 Sei
 $$
 A_{mn}  v_{ns} = 
-	\left(
-	\begin{matrix}
+	\left(\begin{matrix}
 	a_{11} & \cdots & a_{1n} \\
 	\vdots & \ddots & \vdots\\
 	a_{m1} & \cdots & a_{mn}
-	\end{matrix}
-	\right)
-	\left(
-	\begin{matrix}
+	\end{matrix}\right)
+	\left(\begin{matrix}
 	b_{1s} \\
 	\vdots\\
 	b_{ns}
-	\end{matrix}
-	\right)
+	\end{matrix}\right)
 $$
 $$
 	=
-	\left(
-	\begin{matrix}
+	\left(\begin{matrix}
 	a_{11} b_{11} + a_{12} b_{2s} + \cdots + a_{1n} + b_{ns}\\
 	\vdots \\
 	a_{m1} b_{1s} + a_{m2} b_{2s} + \cdots + a_{mn} + b_{ns}
-	\end{matrix}
-	\right)
-	\tag{8}
+	\end{matrix}\right)
+	\tag{7}
 $$
 mit
 $$
 B_{ns} = \left(\begin{matrix}v_{n1} & \cdots & v_{ns}\end{matrix}\right)
 $$
-so ergibt sich $(7)$.
+so ergibt sich $(5)$.
+
+---
+
+**Polynomfunktionen** lassen sich als ein Matrizenprodukt darstellen:
+
+Sei $p(x)=a_{m}x^m+a_{m-1}x^{m-1}+\cdots+a_{1}x^1+a_{0}x^0$ bzw. $p(x)=a_{m}x^m+a_{m-1}x^{m-1}+\cdots+a_{1}x+a_{0}$ eine Polynomfunktion m-ten Grades mit $\forall i \in \mathbb{N},i<(m+1): a_{i} \in \mathbb{R}$, so stellt die folgende Matrix p(x) dar:
+$$
+	\left(\begin{matrix}
+	a_{m}x^m + a_{m-1}x^{m-1} + \cdots + a_{1}x^1 +a_{0}x^0
+	\end{matrix}\right)
+	=
+	\left(\begin{matrix}
+	a_{m} & a_{m-1} & \cdots & a_{1} & a_{0}
+	\end{matrix}
+	\right)
+	\left(
+	\begin{matrix}
+	x^m \\
+	x^{m-1}\\
+	\vdots \\
+	x^1 \\
+	x^0
+	\end{matrix}\right)
+	\tag{8}
+$$
+
+Seien m verschiedene $p(x_{i})$ und $a_{i}$ gegeben so kann man als Matrixprodukt schreiben:
+$$
+	\left(\begin{matrix}
+	a_{m} & a_{m-1} & \cdots & a_{1} & a_{0}\\
+	\vdots & \vdots & \ddots & \vdots & \vdots\\
+	a_{m} & a_{m-1} & \cdots & a_{1} & a_{0}
+	\end{matrix}\right)
+	\left(\begin{matrix}
+	x^m \\
+	x^{m-1}\\
+	\vdots \\
+	x^1 \\
+	x^0
+	\end{matrix}\right)
+	=
+	\left(\begin{matrix}
+	p(x_{m}) \\
+	p(x_{m-1})\\
+	\vdots \\
+	p(x_{1}) \\
+	p(x_{0})
+	\end{matrix}\right)
+	\tag{9}
+$$
+kurz:
+$$Ax=b$$
+
+
+Diese Schreibweise vereinfacht die Notation des Additionsverfahrens zum Lösen der Polynomfunktion.
+
+Zur Überprüfung ihrer Bemühungen:
+* Multipliziert man eine Zeile aus $A$ mit einem Skalar so muss in der gleichen Zeile in $b$ mit dem selben Skalar multipliziert werden
+* Addiert man die i-te Zeile in $A$ auf die j-te Zeile in $A$, so muss die i-te Zeile in $b$ auf die j-te Zeile in $b$ addiert werden
+
+
+>Die optimalste Form von a wäre eine Diagonalmatrix (alle Einträge außer auf der Hauptdiagonale sind 0):
+>$$
+D_{A} =
+\left(\begin{matrix}
+	r_{m} & 0 & \cdots & 0 & 0\\
+	0 & r_{m-1}  & \cdots & 0 & 0\\
+	\vdots & \vdots & \ddots & \vdots & \vdots\\
+	0 & 0 & \cdots & r_{1} & 0 \\
+	0 & 0 & \cdots & 0 & r_{0}
+	\end{matrix}\right)
+$$
