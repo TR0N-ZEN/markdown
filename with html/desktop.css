@@ -1,0 +1,54 @@
+:root
+{
+	--main: black;
+	--secondary: white;
+	--third: hsl(315, 84%, 41%);
+}
+* { box-sizing: border-box; }
+
+
+
+@media (min-aspect-ratio:3/2) {
+	html, body
+	{
+		background-color:var(--main);
+		color: var(--secondary);
+		font-family: sega, sans-serif;
+		font-size: 3vmin;
+		line-height: 5vmin;
+		overflow-wrap: break-word;
+		margin: 0;
+		padding: 0;
+	}
+
+	.wrapper
+	{
+		display: grid;
+		height: 100vh;
+		width: 100vw;
+		grid-template-areas:
+			"animation_field text";
+		grid-template-columns: 70% 30%;
+		grid-template-rows: 100%;
+	}
+
+	.wrapper > div
+	{
+		border: 8px solid var(--secondary);
+	}
+	div.animation
+	{
+		grid-area: animation_field;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+		div.animation > div { border: 3px solid var(--secondary); height: 30vh; width: 30vh; }
+		.container { width:inherit; height:inherit; }
+	div.text
+	{
+		grid-area: text;
+	}
+}

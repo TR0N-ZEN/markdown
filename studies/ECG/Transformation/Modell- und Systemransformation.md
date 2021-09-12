@@ -202,8 +202,8 @@ $$
 	\end{matrix}	\right)
 \tag{8}
 $$
-Und um auch den Koordinatenvektor zu errechen, bei gegebener Basis $B'$
-mit $D_{B'} = \left(\begin{matrix} x' & y' \end{matrix}\right)$
+Und um auch den Koordinatenvektor bezüglich der Basis $B'$ zu errechen, bei gegebener Basis $B'$
+bzw. Darstellungsmatrix $D_{B'} = \left(\begin{matrix} x' & y' \end{matrix}\right)$
 $$
  v_{B'} = 
 	\left(	\begin{matrix}
@@ -228,4 +228,4 @@ wobei $M_{A}^B$ zwei Interpretationen hat...
 
 Wobei nach der Systemtransformation mit $(8)$ klar ist, dass $M_{A}^B = {(D_{A})}^{-1}D_{B}$, denn $v = D_{A}v_{A} = D_{B}v_{B}$
 
-D.h. $M_{A}^B M_{B}^C = {(D_{A})}^{-1}D_{B} {(D_{B})}^{-1}D_{C} = {(D_{A})}^{-1}D_{C} = M_{A}^C$
+Es folgt $M_{A}^B M_{B}^C = {(D_{A})}^{-1}D_{B} {(D_{B})}^{-1}D_{C} = {(D_{A})}^{-1}D_{C} = M_{A}^C$ .
