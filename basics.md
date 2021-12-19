@@ -83,3 +83,16 @@ This is a quote.
 |-|-|
 |Theo|theo.reichert7@gmail.com|
 |a|a4@gmail.com|
+
+
+<details><summary>CLICK ME</summary>
+<p>
+
+#### yes, even hidden code blocks!
+
+```python
+print("hello world!")
+```
+
+</p>
+</details>
