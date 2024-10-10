@@ -38,9 +38,9 @@ $$
 $$
 \left(
 	\begin{matrix}
-	1				& 2 			& \cdots 	& m\\
-	\vdots 	& \vdots 	& \ddots	& \vdots\\
-	n 			& \cdots  & \cdots 	& n*m
+	1       & 2       & \cdots 	& m\\
+	\vdots 	& \vdots  & \ddots  & \vdots\\
+	n       & \cdots  & \cdots 	& n*m
 	\end{matrix}
 	\tag{matrix 3}
 \right)
